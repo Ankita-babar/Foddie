@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foodie - Order food online</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <header class="bar">
+        <a class="logo" href="/">Foodie</a>
+        <nav>
+            <button data-view="menu" class="active">Menu</button>
+            <button data-view="orders">My orders</button>
+            <a href="admin.html">Admin</a>
+        </nav>
+        <label class="who">Ordering as
+            <select id="customer"></select>
+        </label>
+    </header>
+
+    <div id="notice" role="status"></div>
+
+    <main id="menuView" class="layout">
+        <aside id="restaurants" aria-label="Restaurants"></aside>
+        <section id="menu" aria-label="Menu"></section>
+        <aside id="cart" aria-label="Your order"></aside>
+    </main>
+
+    <main id="ordersView" class="orders" hidden>
+        <div class="orders-head">
+            <h2>My orders</h2>
+            <button id="refresh" class="ghost">Refresh</button>
+        </div>
+        <div id="orderList"></div>
+    </main>
+
+    <script src="shop.js"></script>
+</body>
+</html>
